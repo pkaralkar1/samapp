@@ -39,8 +39,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo "Running Unit Test"
-
+      - run: |
+          echo 'Running unit tests'
+          pip install pytest pytest-mock
+          python -m pytest tests/unit
   delete-feature:
     if: startsWith(github.event.ref, 'feature') && github.event_name == 'delete'
     runs-on: ubuntu-latest
