@@ -43,6 +43,10 @@ jobs:
           echo 'Running unit tests'
           pip install pytest pytest-mock
           python -m pytest tests/unit
+      - uses: trstringer/manual-approval@v1
+        with:
+           secret: ${{ github.TOKEN }}
+           approvers: pkaralkar1
   delete-feature:
     if: startsWith(github.event.ref, 'feature') && github.event_name == 'delete'
     runs-on: ubuntu-latest
