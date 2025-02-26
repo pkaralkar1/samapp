@@ -2,7 +2,7 @@ version = 0.1
 [default.pipeline_bootstrap.parameters]
 oidc_provider_url = "https://token.actions.githubusercontent.com"
 oidc_client_id = "sts.amazonaws.com"
-github_org = "pkaralkar1"
+github_org = "mimehub"
 github_repo = "samapp"
 deployment_branch = "main"
 oidc_provider = "github-actions"
