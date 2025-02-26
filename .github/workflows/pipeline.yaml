@@ -46,7 +46,7 @@ jobs:
       - uses: trstringer/manual-approval@v1
         with:
            secret: ${{ github.TOKEN }}
-           approvers: MimeHub
+           approvers: mimehub
   delete-feature:
     if: startsWith(github.event.ref, 'feature') && github.event_name == 'delete'
     runs-on: ubuntu-latest
@@ -220,7 +220,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
-          approvers: MimeHub # Replace with GitHub usernames, with the free version you can only have an issue assigned to one username
+          approvers: mimehub # Replace with GitHub usernames, with the free version you can only have an issue assigned to one username
           minimum-approvals: 1
           issue-title: "Manual Approval Required for integration-test"
           issue-body: "Please approve or deny the deployment."
