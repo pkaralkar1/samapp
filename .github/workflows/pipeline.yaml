@@ -46,7 +46,7 @@ jobs:
       - uses: trstringer/manual-approval@v1
         with:
            secret: ${{ github.TOKEN }}
-           approvers: pkaralkar1
+           approvers: MimeHub
   delete-feature:
     if: startsWith(github.event.ref, 'feature') && github.event_name == 'delete'
     runs-on: ubuntu-latest
