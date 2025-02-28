@@ -245,3 +245,6 @@ $RECYCLE.BIN/
 .aws-sam" 
 samconfig.toml
 target
+-e "\n\n.aws-sam" 
+-e "samconfig.toml" 
+-e "target" 
