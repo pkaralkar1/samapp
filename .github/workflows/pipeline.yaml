@@ -220,7 +220,6 @@ jobs:
           issue-title: "Manual Approval Required for integration-test"
           issue-body: "Please approve or deny the deployment."
 
-
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     needs: [manual-approval]
