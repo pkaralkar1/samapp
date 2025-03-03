@@ -105,7 +105,6 @@ jobs:
             --no-fail-on-empty-changeset \
             --role-arn ${TESTING_CLOUDFORMATION_EXECUTION_ROLE}
 
-
   build-and-package:
     if: github.ref == 'refs/heads/main'
     needs: [test]
