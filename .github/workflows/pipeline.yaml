@@ -226,10 +226,9 @@ jobs:
         with:
           aws-region: eu-west-2
           role-to-assume: arn:aws:iam::009242847556:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-Di1YXe194DY2
-          audience: sts.amazonaws.com
-          role-session-name: prod-deployment
-          role-duration-seconds: 3600
-          role-skip-session-tagging: true
+          # role-session-name: prod-deployment
+          # role-duration-seconds: 3600
+          # role-skip-session-tagging: true
 
       - name: Deploy to production account
         run: |
