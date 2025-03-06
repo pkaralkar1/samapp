@@ -208,6 +208,8 @@ jobs:
     # environment: <configured-environment>
     environment: 
       name: Production
+    permissions:
+      issues: write
     steps:
       - uses: actions/checkout@v3
       - uses: aws-actions/setup-sam@v2
@@ -220,8 +222,8 @@ jobs:
       - name: Assume the prod pipeline user role
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: eu-west-2
-          role-to-assume: arn:aws:iam::009242847556:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-Di1YXe194DY2
+          aws-region: ${{ env.PROD_REGION }}
+          role-to-assume: ${{ env.PROD_PIPELINE_EXECUTION_ROLE }}
           role-session-name: prod-deployment
           role-duration-seconds: 3600
           role-skip-session-tagging: true
