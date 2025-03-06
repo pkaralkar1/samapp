@@ -209,7 +209,8 @@ jobs:
     environment: 
       name: Production
     permissions:
-      issues: write
+      #issues: write
+      id-token: write
       contents: read
     steps:
       - uses: actions/checkout@v3
