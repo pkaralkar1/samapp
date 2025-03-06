@@ -208,10 +208,10 @@ jobs:
     # environment: <configured-environment>
     environment: 
       name: Production
-    permissions:
-      #issues: write
-      id-token: write
-      contents: write
+    # permissions:
+    #   #issues: write
+    #   id-token: write
+    #   contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: aws-actions/setup-sam@v2
