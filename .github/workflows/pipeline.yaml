@@ -205,10 +205,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Production
-    # permissions:
-    #   #issues: write
-    #   id-token: write
-    #   contents: write
+    permissions:
+      #issues: write
+      id-token: write
+      #contents: write
     # Configure GitHub Action Environment to have a manual approval step before deployment to production
     # https://docs.github.com/en/actions/reference/environments
     # environment: <configured-environment>
