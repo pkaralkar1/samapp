@@ -224,8 +224,9 @@ jobs:
       - name: Assume the prod pipeline user role
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: ${{ env.PROD_REGION }}
-          role-to-assume: ${{ env.PROD_PIPELINE_EXECUTION_ROLE }}
+          aws-region: eu-west-2
+          role-to-assume: arn:aws:iam::009242847556:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-Di1YXe194DY2
+          audience: sts.amazonaws.com
           role-session-name: prod-deployment
           role-duration-seconds: 3600
           role-skip-session-tagging: true
