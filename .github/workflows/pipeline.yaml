@@ -165,6 +165,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: [build-and-package]
     runs-on: ubuntu-latest
+    environment: 
+      name: Testing
     steps:
       - uses: actions/checkout@v3
       - uses: aws-actions/setup-sam@v2
